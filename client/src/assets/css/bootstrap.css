@@ -41,6 +41,8 @@
   fill: var(--bs-dark)
 }.fill-secondary{
   fill: var(--bs-secondary);
+}.fill-info{
+  fill: var(--bs-info);
 }
 
 /*Additional Font size*/
@@ -153,24 +155,26 @@ input::-ms-clear {
   display: none;
 }
 
-/*changes bootstrap setting */
-.btn-highlight-none{                      
-  box-shadow:none !important; 
-  outline: 0px !important; 
-}.btn-outline-primary:hover {
-  color: var(--bs-white) !important;
-}.btn-outline-warning:hover {
-  color: var(--bs-white) !important;
-}.btn-outline-primary:hover{
-  color: var(--bs-white-rgb);
+/*removes outline when close button is clicked*/
+.btn-close:focus {
+  box-shadow: none;
 }
 
 
 .form-control:focus {
   outline: 0;
   color: var(--bs-dark);
-  border-color: var(--bs-primary);
+  border: .2px solid var(--bs-primary);
   background-color: var(--bs-white-rgb);
-  box-shadow: 0 0 0 0.25rem rgb(61 178 255 / 25%);
+  box-shadow: 0 0 0 0.25rem #2566e06e;
+  /* box-shadow: 0 0 0 0.25rem #3c569c3d; */
 }
 
+
+.inputIcon{
+  top: 16px;
+  left: 10px;
+  opacity: 50%;
+  z-index: 1;
+  position: absolute;
+}

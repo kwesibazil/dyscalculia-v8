@@ -8,7 +8,7 @@ const routes = [
   {
     path: '/',
     name: 'welcome',
-    component:()=> import('@/views/layouts/welcome.vue'),
+    component:()=> import('@/views/layouts/landing-page.vue'),
     // beforeEnter: [removeQueryParams],
   }
 ]
