@@ -8,7 +8,7 @@
     </div>
     <div class="text-center mt-1">
       <span class="text-dark fs-8 opacity-75 me-1">Need an account?</span>
-      <button @click="setAuthModal('signUp')"  class="text-warning text-decoration-none btn btn-link btn-sm px-0" type="button">create account</button>
+      <button @click="setAuthModal('signUp', 'Auth')"  class="text-warning text-decoration-none btn btn-link btn-sm px-0" type="button">create account</button>
     </div>
   </div>          
 </template>

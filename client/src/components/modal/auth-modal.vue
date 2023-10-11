@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column">
     <header>
-      <h1 class="text-center fs-5 fw-bold mb-4 mt-2">Please Sign In to continue</h1>
+      <h1 class="text-center fs-5 fw-bold mb-4 mt-2">Please sign in to continue</h1>
     </header>
     <main class="border border-top-0 bg-white flex-grow-1 ">
       <TabsBtn />

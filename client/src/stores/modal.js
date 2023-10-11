@@ -13,12 +13,20 @@ export const useModalStore = defineStore('modal', {
   
     toggleModal(){
       this.active  = !this.active
+      if(!this.active)setTimeout(_ => this.authForm = this.current = null, 700 )
     },
 
-    setAuthModal(name, modal='Auth'){
+    setAuthModal(name, modal){
       this.authForm = name
       this.current = modal
     },
+
+    showAuthModal(event, modal){
+      if(event.target.name){
+        this.setAuthModal(event.target.name, modal)
+        this.toggleModal()
+      }
+    }
 
 
 

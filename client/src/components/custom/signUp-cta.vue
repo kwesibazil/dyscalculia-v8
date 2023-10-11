@@ -8,7 +8,7 @@
     </div>
     <div class="text-center mt-1">
       <span class="text-dark fs-8 opacity-75 me-1">Already a member?</span>
-      <button @click="setAuthModal('signIn')" class="text-warning text-decoration-none btn btn-link btn-sm px-0" type="button">Login</button>
+      <button @click="setAuthModal('signIn', 'Auth')" class="text-warning text-decoration-none btn btn-link btn-sm px-0" type="button">Login</button>
     </div>
   </div>
 </template>

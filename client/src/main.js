@@ -15,10 +15,11 @@ import '@/assets/css/main.css'
 
 //Global Components
 import Auth from '@/components/modal/auth-modal.vue';
-
+import Research from '@/components/modal/research-modal.vue'
 
 createApp(App)
 .use(createPinia()).use(router)
 .component("Auth", Auth)
+.component("Research", Research)
 .mount('#app')
 
