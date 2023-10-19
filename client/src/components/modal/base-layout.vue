@@ -13,7 +13,7 @@
 
 <script setup>
   import { storeToRefs } from 'pinia'
-  import {useModalStore} from '@/stores/modal'
+  import {useModalStore} from '@/stores/modal-store'
   const {active} = storeToRefs(useModalStore())
   const {toggleModal} = useModalStore()
 </script>

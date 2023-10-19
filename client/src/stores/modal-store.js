@@ -4,9 +4,9 @@ import { defineStore } from 'pinia'
 export const useModalStore = defineStore('modal', {
   state: () =>({
     current: null,
+    loading: null,   
     active: false,                                                                                                  //👈 indicates whether the model is visible or not 
-    authForm: null,
-    errorMsg: null,     
+    authForm: null
   }),
 
   actions:{

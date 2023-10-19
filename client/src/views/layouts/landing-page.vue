@@ -26,7 +26,7 @@
 <script setup>
 
   import { storeToRefs } from 'pinia'
-  import {useModalStore} from '@/stores/modal'
+  import {useModalStore} from '@/stores/modal-store'
   import Modal from '@/components/modal/base-layout.vue';
   import WelcomeNav from '@/components/navbar/welcome-nav.vue';
   

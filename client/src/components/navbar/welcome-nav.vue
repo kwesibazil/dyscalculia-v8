@@ -12,6 +12,6 @@
 
 
 <script setup>
-  import {useModalStore} from '@/stores/modal'
+  import {useModalStore} from '@/stores/modal-store'
   const { showAuthModal} = useModalStore()
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div id="authTab" class="d-flex">
-    <button @click="setAuthModal('signUp', 'Auth')" :class="{'btn--current': authForm == 'signUp'}" class="col-6 btn btn-secondary opacity-50 py-2 py-sm-3" type="button">SignUp</button>
-    <button @click="setAuthModal('signIn', 'Auth')" :class="{'btn--current': authForm == 'signIn'}" class="col-6 btn btn-secondary opacity-50 py-2 py-sm-3" type="button">SignIn</button>
+    <button @click="[setAuthModal('signUp', 'Auth'), resetErrMsg()]" :class="{'btn--current': authForm == 'signUp'}" class="col-6 btn btn-secondary opacity-50 py-2 py-sm-3" type="button">SignUp</button>
+    <button @click="[setAuthModal('signIn', 'Auth'), resetErrMsg()]" :class="{'btn--current': authForm == 'signIn'}" class="col-6 btn btn-secondary opacity-50 py-2 py-sm-3" type="button">SignIn</button>
   </div>
 </template>
 
@@ -9,9 +9,13 @@
 
 <script setup>
   import { storeToRefs } from 'pinia'
-  import { useModalStore } from '@/stores/modal';
+  import {useAuthStore} from '@/stores/auth-store'
+  import { useModalStore } from '@/stores/modal-store';
   const {authForm} = storeToRefs(useModalStore())
   const {setAuthModal} = useModalStore()
+  const {resetErrMsg} = useAuthStore()
+
+
 </script>
 
 
