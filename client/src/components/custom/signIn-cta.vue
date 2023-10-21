@@ -8,8 +8,8 @@
       <button type="submit" class="btn btn-primary text-white py-2 mt-4">Sign In</button>
     </div>
     <div class="text-center mt-1">
-      <span class="text-dark fs-8 opacity-75 me-1">Need an account?</span>
-      <button @click="[setAuthModal('signUp', 'Auth'), resetErrMsg()]"  class="text-warning text-decoration-none btn btn-link btn-sm px-0" type="button">create account</button>
+      <span class="text-dark fs-8 opacity-75 me-1 fw-bold">Need an account?</span>
+      <button @click="[setAuthModal('signUp'), resetErrMsg()]"  class="btn btn-link text-primary btn-sm fw-bold  px-0" type="button">Sign up</button>
     </div>
   </div>          
 </template>

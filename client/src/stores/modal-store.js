@@ -4,28 +4,32 @@ import { defineStore } from 'pinia'
 export const useModalStore = defineStore('modal', {
   state: () =>({
     current: null,
-    loading: null,   
-    active: false,                                                                                                  //👈 indicates whether the model is visible or not 
+    active: false,
+    timeOut: 5000,                                                                                                 //👈 indicates whether the model is visible or not 
     authForm: null
   }),
 
   actions:{
   
-    toggleModal(){
+    toggleModal(modal = ''){
       this.active  = !this.active
-      if(!this.active)setTimeout(_ => this.authForm = this.current = null, 700 )
+      if(this.current && !this.active) setTimeout(_ => this.current = this.authForm = null, 400)
+      else this.current = modal
     },
 
-    setAuthModal(name, modal){
+    setAuthModal(name){
       this.authForm = name
-      this.current = modal
     },
 
-    showAuthModal(event, modal){
-      if(event.target.name){
-        this.setAuthModal(event.target.name, modal)
-        this.toggleModal()
+    mountAuthModal(event, modal){
+      if(event.target.name ){
+        this.toggleModal(modal)
+        this.setAuthModal(event.target.name)
       }
+    },
+
+    closeLoadingModal(){
+      setTimeout(_ => this.toggleModal(), this.timeOut)
     }
 
 

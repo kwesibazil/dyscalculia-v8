@@ -1,7 +1,6 @@
 //Vue Libraries
 import { createApp } from 'vue'
 import { createPinia } from 'pinia' 
-
 import App from './App.vue'
 import router from './router'
 
@@ -15,11 +14,14 @@ import '@/assets/css/main.css'
 
 //Global Components
 import Auth from '@/components/modal/auth-modal.vue';
+import Loading from '@/components/modal/loading-modal.vue'
 import Research from '@/components/modal/research-modal.vue'
+
 
 createApp(App)
 .use(createPinia()).use(router)
 .component("Auth", Auth)
+.component("Loading", Loading)
 .component("Research", Research)
 .mount('#app')
 

@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import {useModalStore} from './modal-store'
+import axiosInstance from '@/helpers/axiosInstance'
 
 export const useAuthStore = defineStore('auth', {
   state: () =>({
@@ -14,45 +15,31 @@ export const useAuthStore = defineStore('auth', {
         this.signUpErr = this.signInErr = false
     },
 
-  
     async userLogin(email, pwd){
       const modal = useModalStore()
       try{
-        console.log(email,pwd);
         console.log('user login');
-        modal.loading = true
+        modal.current = 'Loading'
+        // const res = axiosInstance.get('auth/register', {email, pwd})
+        // console.log(res.data);
       }
-      catch(err){
-        this.signInErr = true
-      }
-      finally{
-        setTimeout(_ => {
-          modal.loading = false
-          console.log('fetch complete');
-        }
-        , 2000)
-      }
+      catch(err){this.signUpErr = true}
+      finally{modal.closeLoadingModal()}
     },
-
 
 
     async userRegistration(email, pwd){
       const modal = useModalStore()
       try{
-        console.log(email,pwd);
         console.log('user register');
-        modal.loading = true
+        modal.current = 'Loading'
+        // const res = axiosInstance.get('auth/register', {email, pwd})
+        // console.log(res.data);
       }
-      catch(err){
-        this.signUpErr = true
-      }
-      finally{
-        setTimeout(_ => {
-          modal.loading = false
-          console.log('fetch complete');
-        }
-        , 2000)
-      }
+      catch(err){this.signUpErr = true}
+      finally{modal.closeLoadingModal()}
     }
+
+
   }//actions ends here
 })//store ends here

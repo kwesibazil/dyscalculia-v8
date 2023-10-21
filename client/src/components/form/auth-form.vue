@@ -28,7 +28,7 @@
   const form = reactive({email: '',pwd: ''})
   const {authForm} = storeToRefs(useModalStore())
   const authStore = useAuthStore()
-
+  
 
 
   /**
@@ -36,7 +36,7 @@
           validate and sanitize user input 
           before submitting to the server 
   */
-  const submitForm = async () =>{     
+  const submitForm = async () =>{  
     if (authForm.value === 'signIn') 
       await authStore.userLogin(form.email, form.pwd)
     else 

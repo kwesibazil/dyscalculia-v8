@@ -1,7 +1,8 @@
 <template>
   <div class="input-group input-group-lg">
     <LockIcon class="inputIcon" />
-    <input  
+    <input 
+      required
       autocomplete="on"  
       :type="attr.type" 
       :value="modelValue" 

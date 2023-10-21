@@ -11,8 +11,8 @@
       <button type="submit" class="btn btn-primary text-white py-2 mt-3">Create Account</button>
     </div>
     <div class="text-center mt-1">
-      <span class="text-dark fs-8 opacity-75 me-1">Already a member?</span>
-      <button @click="[setAuthModal('signIn', 'Auth'), resetErrMsg()]" class="text-warning text-decoration-none btn btn-link btn-sm px-0" type="button">Login</button>
+      <span class="text-dark fs-8 opacity-75 me-1 fw-bold">Already a member?</span>
+      <button @click="[setAuthModal('signIn'), resetErrMsg()]" class="btn btn-link text-primary btn-sm fw-bold px-0" type="button">Sign in</button>
     </div>
   </div>
 </template>

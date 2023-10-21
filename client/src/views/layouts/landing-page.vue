@@ -18,7 +18,7 @@
         Please be assured that the data collected will remain confidential and 
         used solely for academic purposes.
       </p>
-      <button  @click="showAuthModal($event, 'Research')" name="research" class="btn btn-primary my-4 text-white hvr-grow" type="button">Learn more</button>
+      <button  @click=" toggleModal('Research')" name="research" class="btn btn-primary my-4 text-white hvr-grow" type="button">Learn more</button>
     </div>
   </div>
 </template>
@@ -31,7 +31,7 @@
   import WelcomeNav from '@/components/navbar/welcome-nav.vue';
   
   const {current} = storeToRefs(useModalStore())
-  const { showAuthModal} = useModalStore() 
+  const {toggleModal} = useModalStore() 
 </script> 
 
 <style scoped>

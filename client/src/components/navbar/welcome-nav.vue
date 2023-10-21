@@ -3,7 +3,7 @@
     <button class="btn btn-link   d-none d-sm-block hvr-grow" type="button">
       <img class="img-fluid" width="150" src="@/assets/images/logo/dyscalculia.png" alt="dyscalculia">
     </button>
-    <div @click="showAuthModal($event, 'Auth')">
+    <div @click="mountAuthModal($event, 'Auth')">
       <button name="signUp" class="btn btn-outline-primary me-3 hvr-grow">Sign Up</button>
       <button name="signIn" class="btn btn-primary text-white hvr-grow">Sign In</button>
     </div>
@@ -13,5 +13,5 @@
 
 <script setup>
   import {useModalStore} from '@/stores/modal-store'
-  const { showAuthModal} = useModalStore()
+  const {mountAuthModal} = useModalStore()
 </script>
